@@ -19,7 +19,7 @@ jobs:
     - name: Build
       run: |
         sudo apt update && sudo apt install android-sdk
-        rustup target add aarch64-linux-android
+        rustup target add aarch64-linux-android armv7-linux-androideabi i686-linux-android
         cargo build --verbose --lib --no-default-features
 
     - name: Upload a Build Artifact
