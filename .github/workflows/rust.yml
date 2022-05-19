@@ -19,7 +19,7 @@ jobs:
     - name: Build
       run: |
         rustup target add aarch64-linux-android
-        cargo build --verbose --bin boringtun-cli --release --target aarch64-linux-android
+        cargo build --verbose --lib --no-default-features --target aarch64-linux-android
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.0.0
